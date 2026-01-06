@@ -220,7 +220,7 @@ export default function Home() {
               </div>
             </motion.div>
 
-            {/* Timeline Item 2 */}
+            {/* Timeline Item 2: Certifications */}
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -233,11 +233,15 @@ export default function Home() {
               
               <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-2xl bg-card border border-white/5 shadow-lg hover:border-primary/20 transition-colors">
                 <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
-                  <h3 className="text-lg font-bold font-display text-foreground">JP Morgan Chase</h3>
-                  <span className="text-xs font-mono text-primary bg-primary/10 px-2 py-1 rounded">Virtual</span>
+                  <h3 className="text-lg font-bold font-display text-foreground">Certifications</h3>
+                  <span className="text-xs font-mono text-primary bg-primary/10 px-2 py-1 rounded">Achievements</span>
                 </div>
-                <p className="text-muted-foreground font-medium">Advanced Software Engineering Job Simulation</p>
-                <p className="text-sm text-muted-foreground/80 mt-2">Developed backend system for financial data processing.</p>
+                <div className="space-y-2 text-sm text-muted-foreground/80">
+                  <p className="flex items-center gap-2"><ArrowRight className="w-3 h-3 text-primary" /> Advanced Software Engineering - J.P. Morgan Chase</p>
+                  <p className="flex items-center gap-2"><ArrowRight className="w-3 h-3 text-primary" /> Solutions Architecture - AWS</p>
+                  <p className="flex items-center gap-2"><ArrowRight className="w-3 h-3 text-primary" /> Top 20, Code Rush 2K25 Hackathon</p>
+                  <p className="flex items-center gap-2"><ArrowRight className="w-3 h-3 text-primary" /> HTML and CSS Bootcamp</p>
+                </div>
               </div>
             </motion.div>
 
