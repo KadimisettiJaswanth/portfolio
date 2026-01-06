@@ -220,32 +220,7 @@ export default function Home() {
               </div>
             </motion.div>
 
-            {/* Timeline Item 2: Certifications */}
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
-            >
-              <div className="flex items-center justify-center w-10 h-10 rounded-full border border-white/10 bg-card shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 group-hover:border-primary group-hover:scale-110 transition-all duration-300">
-                <Briefcase className="w-5 h-5 text-purple-400" />
-              </div>
-              
-              <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-2xl bg-card border border-white/5 shadow-lg hover:border-primary/20 transition-colors">
-                <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
-                  <h3 className="text-lg font-bold font-display text-foreground">Certifications</h3>
-                  <span className="text-xs font-mono text-primary bg-primary/10 px-2 py-1 rounded">Achievements</span>
-                </div>
-                <div className="space-y-2 text-sm text-muted-foreground/80">
-                  <p className="flex items-center gap-2"><ArrowRight className="w-3 h-3 text-primary" /> Advanced Software Engineering - J.P. Morgan Chase</p>
-                  <p className="flex items-center gap-2"><ArrowRight className="w-3 h-3 text-primary" /> Solutions Architecture - AWS</p>
-                  <p className="flex items-center gap-2"><ArrowRight className="w-3 h-3 text-primary" /> Top 20, Code Rush 2K25 Hackathon</p>
-                  <p className="flex items-center gap-2"><ArrowRight className="w-3 h-3 text-primary" /> HTML and CSS Bootcamp</p>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Timeline Item 3 */}
+            {/* Timeline Item 2: Sasi Junior College */}
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -287,6 +262,63 @@ export default function Home() {
               </div>
             </motion.div>
 
+          </div>
+        </div>
+      </section>
+
+      {/* Certifications Section */}
+      <section id="certifications" className="py-20 md:py-32 relative">
+        <div className="container mx-auto px-4 md:px-6">
+          <SectionHeading title="Certifications" subtitle="Professional Growth" />
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="p-6 rounded-2xl bg-card border border-white/5 shadow-lg hover:border-primary/20 transition-all group"
+            >
+              <Briefcase className="w-8 h-8 text-primary mb-4 group-hover:scale-110 transition-transform" />
+              <h3 className="font-bold mb-2">Software Engineering</h3>
+              <p className="text-sm text-muted-foreground">J.P. Morgan Chase & Co. Virtual Experience</p>
+            </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="p-6 rounded-2xl bg-card border border-white/5 shadow-lg hover:border-primary/20 transition-all group"
+            >
+              <Cpu className="w-8 h-8 text-purple-400 mb-4 group-hover:scale-110 transition-transform" />
+              <h3 className="font-bold mb-2">Solutions Architecture</h3>
+              <p className="text-sm text-muted-foreground">AWS Virtual Experience</p>
+            </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              className="p-6 rounded-2xl bg-card border border-white/5 shadow-lg hover:border-primary/20 transition-all group"
+            >
+              <Terminal className="w-8 h-8 text-indigo-400 mb-4 group-hover:scale-110 transition-transform" />
+              <h3 className="font-bold mb-2">Code Rush 2K25</h3>
+              <p className="text-sm text-muted-foreground">Top 20 Hackathon Finalist</p>
+            </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+              className="p-6 rounded-2xl bg-card border border-white/5 shadow-lg hover:border-primary/20 transition-all group"
+            >
+              <Layout className="w-8 h-8 text-blue-400 mb-4 group-hover:scale-110 transition-transform" />
+              <h3 className="font-bold mb-2">Web Development</h3>
+              <p className="text-sm text-muted-foreground">HTML & CSS Bootcamp Certification</p>
+            </motion.div>
           </div>
         </div>
       </section>
