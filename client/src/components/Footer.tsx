@@ -8,7 +8,7 @@ export function Footer() {
       <div className="container mx-auto px-4 text-center">
         <div className="flex justify-center gap-6 mb-8">
           <a 
-            href="https://github.com/jaswanthkadimisetti" 
+            href="https://github.com/KadimisettiJaswanth" 
             target="_blank" 
             rel="noreferrer" 
             className="p-3 bg-secondary rounded-full hover:bg-primary hover:text-white transition-all duration-300"
@@ -16,7 +16,7 @@ export function Footer() {
             <Github className="w-5 h-5" />
           </a>
           <a 
-            href="https://linkedin.com/in/kadimisettijaswanth" 
+            href="https://www.linkedin.com/in/jaswanth-kadimisetti-443a4a2a9/" 
             target="_blank" 
             rel="noreferrer" 
             className="p-3 bg-secondary rounded-full hover:bg-primary hover:text-white transition-all duration-300"

@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Link as ScrollLink } from "react-scroll";
 import { ArrowRight, Download, Code2, Database, Terminal, Layout, Cpu, Globe, GraduationCap, Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Navbar } from "@/components/Navbar";
@@ -11,7 +10,7 @@ import { ProjectCard } from "@/components/ProjectCard";
 import { ContactForm } from "@/components/ContactForm";
 
 // Assets
-import resumePdf from "@assets/resume.pdf";
+// import resumePdf from "@assets/resume.pdf";
 
 const taglines = [
   "Building digital experiences that matter.",
@@ -69,12 +68,12 @@ export default function Home() {
             </div>
 
             <div className="flex flex-wrap gap-4 mt-8">
-              <ScrollLink to="projects" smooth={true} offset={-80}>
+              <a href="#projects">
                 <Button size="lg" className="h-12 px-8 text-base rounded-full shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all">
                   View Work <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
-              </ScrollLink>
-              <a href={resumePdf} target="_blank" rel="noopener noreferrer">
+              </a>
+              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" variant="outline" className="h-12 px-8 text-base rounded-full border-2 hover:bg-secondary/80">
                   Resume <Download className="ml-2 w-4 h-4" />
                 </Button>
@@ -170,8 +169,7 @@ export default function Home() {
                 <SkillBadge name="HTML5" icon={<Layout className="w-4 h-4" />} delay={0.1} />
                 <SkillBadge name="CSS3" icon={<Layout className="w-4 h-4" />} delay={0.2} />
                 <SkillBadge name="React.js" icon={<Globe className="w-4 h-4" />} delay={0.3} />
-                <SkillBadge name="Tailwind CSS" icon={<Layout className="w-4 h-4" />} delay={0.4} />
-                <SkillBadge name="Framer Motion" icon={<Layout className="w-4 h-4" />} delay={0.5} />
+                <SkillBadge name="PHP" icon={<Layout className="w-4 h-4" />} delay={0.4} />
               </div>
             </div>
 
@@ -233,10 +231,11 @@ export default function Home() {
               
               <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-2xl bg-card border border-white/5 shadow-lg hover:border-primary/20 transition-colors">
                 <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
-                  <h3 className="text-lg font-bold font-display text-foreground">Intermediate (MPC)</h3>
+                  <h3 className="text-lg font-bold font-display text-foreground">Intermediate</h3>
                   <span className="text-xs font-mono text-primary bg-primary/10 px-2 py-1 rounded">2021-2023</span>
                 </div>
                 <p className="text-muted-foreground font-medium">Sasi Junior College</p>
+                <p className="text-sm text-muted-foreground/80 mt-2">Board: BIEAP</p>
                 <p className="text-sm text-muted-foreground/80 mt-2">Score: 95.1%</p>
               </div>
             </motion.div>
@@ -254,10 +253,11 @@ export default function Home() {
               
               <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-2xl bg-card border border-white/5 shadow-lg hover:border-primary/20 transition-colors">
                 <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
-                  <h3 className="text-lg font-bold font-display text-foreground">Schooling</h3>
+                  <h3 className="text-lg font-bold font-display text-foreground">High School</h3>
                   <span className="text-xs font-mono text-primary bg-primary/10 px-2 py-1 rounded">2021</span>
                 </div>
                 <p className="text-muted-foreground font-medium">Good Shephard English Medium School</p>
+                <p className="text-sm text-muted-foreground/80 mt-2">Board: ICSE</p>
                 <p className="text-sm text-muted-foreground/80 mt-2">Score: 84.5%</p>
               </div>
             </motion.div>
@@ -280,7 +280,9 @@ export default function Home() {
               className="p-6 rounded-2xl bg-card border border-white/5 shadow-lg hover:border-primary/20 transition-all group"
             >
               <Briefcase className="w-8 h-8 text-primary mb-4 group-hover:scale-110 transition-transform" />
-              <h3 className="font-bold mb-2">Software Engineering</h3>
+              <a href="https://www.theforage.com/completion-certificates/Sj7temL583QAYpHXD/E6McHJDKsQYh79moz_Sj7temL583QAYpHXD_tRc8AJ6MsokMqcbmq_1760640884147_completion_certificate.pdf" target="_blank" rel="noopener noreferrer">
+                <h3 className="font-bold mb-2 hover:text-primary transition-colors">Software Engineering</h3>
+              </a>
               <p className="text-sm text-muted-foreground">J.P. Morgan Chase & Co. Virtual Experience</p>
             </motion.div>
 
@@ -292,7 +294,9 @@ export default function Home() {
               className="p-6 rounded-2xl bg-card border border-white/5 shadow-lg hover:border-primary/20 transition-all group"
             >
               <Cpu className="w-8 h-8 text-purple-400 mb-4 group-hover:scale-110 transition-transform" />
-              <h3 className="font-bold mb-2">Solutions Architecture</h3>
+              <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/pmnMSL4QiQ9JCgE3W/kkE9HyeNcw6rwCRGw_pmnMSL4QiQ9JCgE3W_tRc8AJ6MsokMqcbmq_1740828999863_completion_certificate.pdf" target="_blank" rel="noopener noreferrer">
+                <h3 className="font-bold mb-2 hover:text-primary transition-colors">Solutions Architecture</h3>
+              </a>
               <p className="text-sm text-muted-foreground">AWS Virtual Experience</p>
             </motion.div>
 
@@ -304,7 +308,9 @@ export default function Home() {
               className="p-6 rounded-2xl bg-card border border-white/5 shadow-lg hover:border-primary/20 transition-all group"
             >
               <Terminal className="w-8 h-8 text-indigo-400 mb-4 group-hover:scale-110 transition-transform" />
-              <h3 className="font-bold mb-2">Code Rush 2K25</h3>
+              <a href="/jaswanth.pdf" target="_blank" rel="noopener noreferrer">
+                <h3 className="font-bold mb-2 hover:text-primary transition-colors">Code Rush 2K25</h3>
+              </a>
               <p className="text-sm text-muted-foreground">Top 20 Hackathon Finalist</p>
             </motion.div>
 
@@ -316,7 +322,9 @@ export default function Home() {
               className="p-6 rounded-2xl bg-card border border-white/5 shadow-lg hover:border-primary/20 transition-all group"
             >
               <Layout className="w-8 h-8 text-blue-400 mb-4 group-hover:scale-110 transition-transform" />
-              <h3 className="font-bold mb-2">Web Development</h3>
+              <a href="/9289148_96143461761913355891.pdf" target="_blank" rel="noopener noreferrer">
+                <h3 className="font-bold mb-2 hover:text-primary transition-colors">Web development</h3>
+              </a>
               <p className="text-sm text-muted-foreground">HTML & CSS Bootcamp Certification</p>
             </motion.div>
           </div>
@@ -333,21 +341,21 @@ export default function Home() {
               title="EasyRide"
               description="A responsive ride-sharing platform concept. Focuses on user-friendly interface design and seamless booking flow simulation."
               tags={["HTML5", "CSS3", "JavaScript", "Responsive Design"]}
-              links={{ github: "https://github.com/jaswanthkadimisetti" }}
+              links={{ github: "https://github.com/KadimisettiJaswanth/coderush2k25", demo: "https://kadimisettijaswanth.github.io/coderush2k25/" }}
               delay={0.1}
             />
             <ProjectCard
               title="Financial Data Feed"
               description="Developed a backend system to fetch and process financial data using a REST API during JP Morgan Chase simulation."
               tags={["Python", "REST API", "Data Processing", "Backend"]}
-              links={{ github: "https://github.com/jaswanthkadimisetti" }}
+              links={{ github: "https://github.com/KadimisettiJaswanth/forage-midas" }}
               delay={0.2}
             />
             <ProjectCard
               title="Netflix Clone"
               description="A faithful recreation of the Netflix homepage demonstrating advanced layout proficiency and modern CSS techniques."
               tags={["HTML5", "CSS3", "Flexbox", "Grid"]}
-              links={{ github: "https://github.com/jaswanthkadimisetti" }}
+              links={{ github: "https://github.com/KadimisettiJaswanth/netflixclone" }}
               delay={0.3}
             />
           </div>
@@ -376,7 +384,7 @@ export default function Home() {
                     <p className="text-foreground font-medium group-hover:text-primary transition-colors">jasuk05@gmail.com</p>
                   </div>
                 </a>
-                <a href="https://linkedin.com/in/kadimisettijaswanth" target="_blank" rel="noreferrer" className="flex items-center gap-4 group">
+                <a href="https://www.linkedin.com/in/jaswanth-kadimisetti-443a4a2a9/" target="_blank" rel="noreferrer" className="flex items-center gap-4 group">
                   <div className="p-3 rounded-full bg-card border border-white/10 group-hover:border-primary group-hover:text-primary transition-colors">
                     <ArrowRight className="w-5 h-5" />
                   </div>
