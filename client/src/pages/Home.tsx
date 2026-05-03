@@ -50,7 +50,7 @@ export default function Home() {
               Available for Hire
             </div>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-display leading-tight mb-6">
-              Hi, I'm <br />
+              Hello, I'm <br />
               <span className="text-gradient">Kadimisetti Jaswanth</span>
             </h1>
             
